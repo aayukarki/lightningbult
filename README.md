@@ -12,7 +12,7 @@ Developer: Aayush Karki
 
 ```bash
  npm install
- npm start
+ gulp watch
  ```
 
 Reference for full repository

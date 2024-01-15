@@ -1,0 +1,165 @@
+$primary: #C6D6E6;
+$secondary: #9F1D22;
+$tertiary: #0D1228;
+$light: #F5F5F5;
+$grey: #DBDBDB;
+$black: #000000;
+$white: #ffffff;
+$lightblue: #18D1EE;
+$darkblue: #3247A4;
+$green: #008000;
+
+$theme-colors: (
+  ) !default;
+$theme-colors: map-merge(("primary": $primary,
+      "secondary": $secondary,
+      "tertiary": $tertiary,
+      "grey": $grey,
+      "light": $light,
+      "black": $black,
+      "white": $white,
+      "lightblue": $lightblue,
+      "darkblue": $darkblue,
+      "green": $green,
+    ),
+    $theme-colors
+);
+
+// Grid Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  ) !default;
+// Container sizing
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1540px,
+  ) !default;
+
+$enable-negative-margins: true;
+
+$spacer: 1rem !default;
+$spacers: (
+  ) !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge((0: 0,
+      0_25: ($spacer * .25),
+      0_5: ($spacer * .5),
+      0_75: ($spacer * .75),
+      0_95: ($spacer * .95),
+      1: $spacer,
+      1_125: ($spacer * 1.125),
+      1_25: ($spacer * 1.25),
+      1_5: ($spacer * 1.5),
+      1_75: ($spacer * 1.75),
+      2: ($spacer * 2),
+      2_25: ($spacer * 2.25),
+      2_5: ($spacer * 2.5),
+      3: ($spacer * 3),
+      3_75: ($spacer * 3.75),
+      4:($spacer * 4),
+      5:($spacer * 5),
+      6:($spacer * 6),
+      7:($spacer * 7),
+      8:($spacer * 8),
+      9:($spacer * 9),
+      10:($spacer * 10),
+      11:($spacer * 11),
+      12:($spacer * 12),
+      13:($spacer * 13),
+      14:($spacer * 14),
+      15:($spacer * 15),
+      16:($spacer * 16),
+      18:($spacer * 18),
+      20:($spacer * 20),
+      22:($spacer * 22),
+      24:($spacer * 24),
+      25:($spacer * 25), ),
+
+    $spacers
+);
+
+$form-group-margin-bottom: 0 !default;
+$rfs-breakpoint : 1920;
+
+$position-values: (
+  0: 0,
+  50: 50%,
+  70: 70%,
+  100: 100%) !default;
+
+$utilities: (
+  'rounded': (property: border-radius,
+    responsive: true,
+    class: rounded,
+    values: (circle: 50%,
+      pill: 50rem,
+      0: 0,
+      10: 10px,
+      15: 15px,
+      20: 20px,
+      30: 30px,
+      40: 40px,
+      50: 50px,
+      75: 75px)),
+  'width': (property: width,
+    responsive: true,
+    class: w,
+    values: (15: 15%,
+      25: 25%,
+      30: 30%,
+      50: 50%,
+      60: 60%,
+      75: 75%,
+      100: 100%,
+      auto: auto)),
+  'font-size': (property: font-size,
+    responsive: true,
+    class: fs,
+    values: (75: 75px,
+      60: 60px,
+      55: 55px,
+      48: 48px,
+      45: 45px,
+      40: 40px,
+      38: 38px,
+      35: 35px,
+      33: 33px,
+      30: 30px,
+      28: 28px,
+      26: 26px,
+      24: 24px,
+      22: 22px,
+      20: 20px,
+      18: 18px,
+      17: 17px,
+      16: 16px,
+      14: 14px,
+      12: 12px,
+      10: 10px)),
+  'weight': (property: font-weight,
+    responsive: true,
+    class: fw,
+    values: (300: 300,
+      400: 400,
+      500: 500,
+      600: 600,
+      700: 700,
+      800: 800,
+      900: 900)),
+  'letter-spacing': (property: letter-spacing,
+    responsive: true,
+    class: ls,
+    values: (n015: -0.15rem)),
+  'text-transform': (property: text-transform,
+    responsive: true,
+    class: text,
+    values: (uppercase: uppercase,
+      lowercase: lowercase,
+      capitalize: capitalize,
+      none: none))) !default;

@@ -1,0 +1,89 @@
+// @function imgUrl($file, $path: "background") {
+//     @return url("../images/"+ $path + "/"+ $file) no-repeat;
+// }
+
+.rebate-slider,
+.brands-slider {
+    .slick-track {
+        display: flex;
+    }
+
+    .slick-slide {
+        display: flex;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.rebate-slider {
+    letter-spacing: 0.2rem;
+    transform: rotate(2deg);
+}
+
+.features-slider {
+    .slick-track {
+        display: flex !important;
+    }
+
+    .slick-slide {
+        height: inherit !important;
+    }
+}
+
+.prev-arrow,
+.next-arrow {
+    cursor: pointer;
+    transition: 0.35s all ease;
+
+    &:hover {
+        filter: invert(0.3);
+        transform: scale(1.15);
+    }
+}
+
+.nsw-ess {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    @include media-breakpoint-down(lg) {
+        bottom: unset;
+        top: 0;
+        width: 30%;
+    }
+
+}
+
+.testimonial-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    @include media-breakpoint-down(lg) {
+        position: relative;
+        top: unset;
+        left: unset;
+        transform: none;
+    }
+
+    .testimonials-slider {
+        .testimonial-box {
+            width: 370px;
+            height: 292px;
+
+            @include media-breakpoint-down(lg) {
+                width: auto;
+            }
+        }
+    }
+}
+
+.map-iframe {
+    height: 605px;
+
+    @include media-breakpoint-down(md) {
+        height: 300px;
+    }
+}

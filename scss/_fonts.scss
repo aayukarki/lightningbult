@@ -1,0 +1,33 @@
+/* Font sizes */
+
+@import url("https://use.typekit.net/eyu5yez.css");
+
+$font-urbane: "Urbane", sans-serif;
+
+$font-body: $font-urbane;
+
+$font-families: (
+    "serpentine": "Serpentine",
+);
+
+@each $name,
+$font-family in $font-families {
+    .font-#{$name} {
+        font-family: $font-family, sans-serif;
+    }
+}
+
+$asset-path: "../webfonts/";
+
+/* Fonts includer */
+@mixin font-face($font-family, $font-file, $weight: "normal", $style: "normal") {
+    @font-face {
+        font-family: $font-family;
+        src: local($font-file), url($asset-path + $font-file + ".woff"), url($asset-path + $font-file + ".woff2"), url($asset-path + $font-file + ".eot") format("truetype");
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+@include font-face("Serpentine", "Serpentine-D-Bold", 700);
+
